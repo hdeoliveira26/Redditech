@@ -5,12 +5,14 @@
  * @format
  * @flow strict-local
  */
-
+import {Button} from 'react-native-paper';
+import 'react-native-gesture-handler';
 import React from 'react';
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
+  Text,
   useColorScheme,
   View,
 } from 'react-native';
@@ -29,20 +31,10 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <View>
+      <Text>Siuuuuuuuuuuuuuuuu!!!!</Text>
+      <Button>Press</Button>
+    </View>
   );
 };
 
