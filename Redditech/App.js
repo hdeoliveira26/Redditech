@@ -32,8 +32,7 @@ const App = () => {
 
   return (
     <View>
-      <Text>Siuuuuuuuuuuuuuuuu!!!!</Text>
-      <Button>Press</Button>
+      <Text>VIVE LE DEV!!!!</Text>
     </View>
   );
 };
