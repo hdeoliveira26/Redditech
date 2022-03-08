@@ -5,6 +5,7 @@
  * @format
  * @flow strict-local
  */
+import Auth from './functions/Auth';
 import Btn from './components/Button';
 import {Button} from 'react-native-paper';
 import 'react-native-gesture-handler';

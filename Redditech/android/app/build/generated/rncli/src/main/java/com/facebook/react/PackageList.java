@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // @react-native-masked-view/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
+// react-native-app-auth
+import com.rnappauth.RNAppAuthPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 
@@ -61,6 +63,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new RNCMaskedViewPackage(),
+      new RNAppAuthPackage(),
       new RNGestureHandlerPackage()
     ));
   }
