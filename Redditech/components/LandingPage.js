@@ -1,7 +1,7 @@
 import react from "react";
 import View from 'react-native';
 import Img from "./Image";
-import Btn from './Button';
+import ButtonConnexion from './ButtonConnexion';
 
 
 const LandingPage = () => {
@@ -9,7 +9,7 @@ const LandingPage = () => {
       <View style={backgroundStyle}>
             <Text style ={textStyle}>Redditech</Text>
             <Img/>
-            <Btn/>
+            <ButtonConnexion/>
       </View>
       )
 }
