@@ -14,7 +14,7 @@ async function Auth(){
             'history',
             'edit',
             'save',
-            'submit',
+            'submit', 
             'vote',
           ],
 
@@ -31,7 +31,7 @@ async function Auth(){
     }
 
     try {
-        const result = await authorize(config);
+        const result = await authorize(config); 
         return result;
         
     } catch (error) {

@@ -4,9 +4,10 @@ import Auth from '../functions/Auth';
 
 const Btn = () => (
   <PaperButton
+    
     mode="contained"
     dark={false}
-    color='orange'
+    color='white'
     onPress={(Auth)}
     >
     Reddit Authorization

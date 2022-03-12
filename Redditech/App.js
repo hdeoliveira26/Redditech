@@ -10,6 +10,8 @@ import Btn from './components/Button';
 import {Button} from 'react-native-paper';
 import 'react-native-gesture-handler';
 import React from 'react';
+import {NavigationContainer} from '@react-native/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {
   SafeAreaView,
   ScrollView,
@@ -27,28 +29,35 @@ import {
 import DisplayMode from 'react-native/Libraries/ReactNative/DisplayMode';
 import Img from './components/Image';
 
+const Tab = createBottomTabNavigator ()
+
 const App = () => {
+
+
   const isDarkMode = useColorScheme() === 'dark';
 
 
-  const imgStyle = {
-    
+  const textStyle = {
+    fontSize: 30,
+    color : 'white',
+    paddingBottom: 100,
   }
   const backgroundStyle = {
     backgroundColor: 'black',
+    width: '100%',
     height:'100%',
     display:'flex',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center',qw
   };
 
-  return (
+  
 
-    <View style={backgroundStyle}>
-      <Text>Redditech</Text>
-      <Img style={imgStyle} />
-      <Btn />
-    </View>
+
+  return (
+    <NavigationContainer>
+      
+    </NavigationContainer>
   );
 };
 
