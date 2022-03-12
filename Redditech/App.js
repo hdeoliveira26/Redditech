@@ -31,7 +31,9 @@ const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
 
 
-  
+  const imgStyle = {
+    
+  }
   const backgroundStyle = {
     backgroundColor: 'black',
     height:'100%',
@@ -44,7 +46,7 @@ const App = () => {
 
     <View style={backgroundStyle}>
       <Text>Redditech</Text>
-      <Img />
+      <Img style={imgStyle} />
       <Btn />
     </View>
   );
