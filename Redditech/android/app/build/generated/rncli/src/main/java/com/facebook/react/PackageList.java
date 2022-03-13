@@ -19,6 +19,10 @@ import org.reactnative.maskedview.RNCMaskedViewPackage;
 import com.rnappauth.RNAppAuthPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
+// react-native-safe-area-context
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+// react-native-screens
+import com.swmansion.rnscreens.RNScreensPackage;
 
 public class PackageList {
   private Application application;
@@ -67,7 +71,9 @@ public class PackageList {
       new AsyncStoragePackage(),
       new RNCMaskedViewPackage(),
       new RNAppAuthPackage(),
-      new RNGestureHandlerPackage()
+      new RNGestureHandlerPackage(),
+      new SafeAreaContextPackage(),
+      new RNScreensPackage()
     ));
   }
 }

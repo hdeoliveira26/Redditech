@@ -8,4 +8,4 @@ const Img = () => (
         }
     />
   );
-  export default Img;
+  export  {Img};

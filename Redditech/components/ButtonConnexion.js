@@ -23,4 +23,4 @@ const ButtonConnexion = () => {
 };
 
 
-export default ButtonConnexion;
+export  {ButtonConnexion};

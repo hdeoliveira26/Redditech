@@ -12,6 +12,8 @@ target 'Redditech' do
     :hermes_enabled => false
   )
 
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
   target 'RedditechTests' do
     inherit! :complete
     # Pods for testing
