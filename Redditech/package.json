@@ -10,7 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.16.1",
     "@react-native-masked-view/masked-view": "^0.2.6",
+    "@react-navigation/native-stack": "^6.5.0",
     "@react-navigation/stack": "^6.1.1",
     "git": "^0.1.5",
     "js-base64": "^3.7.2",

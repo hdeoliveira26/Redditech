@@ -6,11 +6,10 @@
  * @flow strict-local
  */
 import Auth from './functions/Auth';
-import Btn from './components/Button';
-import {Button} from 'react-native-paper';
+import ButtonConnexion from './components/ButtonConnexion';
 import 'react-native-gesture-handler';
-import React from 'react';
-import {NavigationContainer} from '@react-native/native';
+import React, {useState,useEffect} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {LandingPage} from './components/LandingPage';
 import {Home} from './components/Home';
@@ -61,7 +60,7 @@ const App = () => {
     height:'100%',
     display:'flex',
     justifyContent: 'center',
-    alignItems: 'center',qw
+    alignItems: 'center',
   };
 
   
