@@ -1,14 +1,14 @@
-#Sun Mar 13 19:02:48 GMT+01:00 2022
-path.4=1/classes.dex
-path.3=14/classes.dex
+#Wed Aug 24 18:08:05 CEST 2022
+path.4=14/classes.dex
+path.3=1/classes.dex
 path.2=0/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.4=D\:\\Project Reddit\\Redditech\\Redditech\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
-base.3=D\:\\Project Reddit\\Redditech\\Redditech\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\14\\classes.dex
-base.2=D\:\\Project Reddit\\Redditech\\Redditech\\android\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
-base.1=D\:\\Project Reddit\\Redditech\\Redditech\\android\\app\\build\\intermediates\\dex\\debug\\mergeLibDexDebug\\0\\classes.dex
-base.0=D\:\\Project Reddit\\Redditech\\Redditech\\android\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.4=/Users/yokx/workspace/Redditech/Redditech/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
+base.3=/Users/yokx/workspace/Redditech/Redditech/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.2=/Users/yokx/workspace/Redditech/Redditech/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.1=/Users/yokx/workspace/Redditech/Redditech/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
+base.0=/Users/yokx/workspace/Redditech/Redditech/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

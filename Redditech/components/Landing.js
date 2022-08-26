@@ -1,11 +1,10 @@
 import React from "react";
-import {View} from 'react-native';
-import {Img} from "./Image";
-import {ButtonConnexion} from './ButtonConnexion';
-import { Text } from "react-native-paper";
-
-
-
+import { View } from "react-native";
+import { Img } from "./Image";
+import { Divider, Text } from "react-native-paper";
+import { Button as PaperButton } from "react-native-paper";
+import Auth from "../functions/Auth";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 const textStyle = {
   fontSize: 30,
@@ -13,7 +12,7 @@ const textStyle = {
   paddingBottom: 100,
 };
 const backgroundStyle = {
-  backgroundColor: "black",
+  backgroundColor: "white",
   width: "100%",
   height: "100%",
   display: "flex",
@@ -21,15 +20,33 @@ const backgroundStyle = {
   alignItems: "center",
 };
 
-const Landing = () => {
-      return (
-      <View style={backgroundStyle}>
-            <Text style ={textStyle}>Redditech</Text>
-            <Img/>
-            <ButtonConnexion/>
-      </View>
-      )
-}
+const Landing = ({navigation}) => {
+  const manageAuth = function () {
+    Auth()
+      .then((result) => {
+        console.log(result);
+        AsyncStorage.setItem("userToken", result.accessToken);
+        navigation.navigate('Home')
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  return (
+    <View style={backgroundStyle}>
+      <Img/>
 
-export  {Landing};
+      <PaperButton
 
+        mode="contained"
+        dark={false}
+        color="orange"
+        onPress={manageAuth}
+      >
+        Reddit Auth
+      </PaperButton>
+    </View>
+  );
+};
+
+export { Landing };

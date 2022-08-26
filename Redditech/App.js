@@ -10,9 +10,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Landing } from "./components/Landing";
 import { Home } from "./components/Home";
-
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {routes} from "./routes/Route";
+import { Profile } from "./components/Profile";
 
 const Stack = createNativeStackNavigator();
 

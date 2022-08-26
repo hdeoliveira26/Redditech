@@ -3,8 +3,8 @@ import {encode} from 'js-base64';
 
 async function Auth(){
     const config = {
-        redirectUrl: 'redditech://app/landing',
-        clientId:'f75y6K6qtq4qvXUhRdDprg',
+        redirectUrl: 'redditech://app/home',
+        clientId:'S5hA22Qo3Ag2H2o2xqUIXA',
         clientSecret:'',
         scopes: [
             'account',
@@ -19,12 +19,12 @@ async function Auth(){
           ],
 
         serviceConfiguration: {
-            authorizationEndpoint: 'https://www.reddit.com/api/v1/authorize',
+            authorizationEndpoint: 'https://www.reddit.com/api/v1/authorize.compact',
             tokenEndpoint: 'https://www.reddit.com/api/v1/access_token',
         },
         customHeaders: {
             token: {
-                Authorization: 'Basic ' + encode('5VdfVjYj3uaYhbLpVRGwNg:'),
+                Authorization: 'Basic ' + encode('S5hA22Qo3Ag2H2o2xqUIXA:'),
             },
         },
         issuer: 'redditech://app',
@@ -35,7 +35,6 @@ async function Auth(){
         return result;
         
     } catch (error) {
-        console.log(error)
     }
 }
 

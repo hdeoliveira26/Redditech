@@ -1,20 +1,20 @@
 const routes = {
     prefixes: [
-        'redditech://app',
+        'reditech://app',
     ],
     config : {screens : {
-        Landing : 'Landing',
-        Home : 'Home',
-        Settings : 'Settings'
+        Landing : 'landing',
+        Home : 'home',
+        Settings : 'settings'
     }},
     state : {
         routes: [
             {
-                name : 'Landing'
+                name : 'landing'
             },{
-                name : 'Home'
+                name : 'home'
             },{
-                name : 'Settings'
+                name : 'settings'
             }
         ]
     }
