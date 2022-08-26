@@ -1,7 +1,6 @@
 import React from "react";
 import { View } from "react-native";
 import { Img } from "./Image";
-import { Divider, Text } from "react-native-paper";
 import { Button as PaperButton } from "react-native-paper";
 import Auth from "../functions/Auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";

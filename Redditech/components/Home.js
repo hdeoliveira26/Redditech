@@ -12,9 +12,8 @@ const Home = () => {
       <Tab.Navigator>
         <Tab.Screen name="Best" component={Best} />
         <Tab.Screen name="Hot" component={Hot} />
-        <Tab.Screen name="New" component={Top} />
+        <Tab.Screen name="Top" component={Top} />
         <Tab.Screen name="Profile" component={Profile}/>
-
       </Tab.Navigator>
   );
 };
