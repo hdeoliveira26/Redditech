@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ScrollView } from "react-native-gesture-handler";
+import { Search } from "./Search";
 
 const Hot = () => {
   const [posts, setPosts] = useState([]);
@@ -54,7 +55,6 @@ const styles = StyleSheet.create({
   subReddits: {
     borderBottom: "1px",
     borderBottomColor: "white",
-    paddingBottom: 30,
     flexDirection: "row",
   },
 });

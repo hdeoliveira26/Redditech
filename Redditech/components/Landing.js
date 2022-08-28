@@ -48,4 +48,4 @@ const Landing = ({navigation}) => {
   );
 };
 
-export { Landing };
+export {Landing};
