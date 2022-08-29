@@ -36,7 +36,7 @@ const Profile = () => {
       ) : (
         <View style={styles.containerProfile}>
           <Image style={styles.photo} source={{ uri: user.snoovatar_img }} />
-          <Text>Knickname :</Text>
+          <Text>Nickname :</Text>
           <Divider />
           <Text>{user.subreddit.title}</Text>
           <Text>Username : </Text>
