@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Text, Image } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ScrollView } from "react-native-gesture-handler";
 
@@ -15,7 +15,6 @@ const Best = () => {
           return result.json();
         })
         .then((data) => {
-          console.log(data.data.children[0].data.title);
           setPosts(data.data.children);
         })
         .catch((error) => {
@@ -29,9 +28,30 @@ const Best = () => {
       <View style={styles.subReddits}>
         <ScrollView>
           {posts.map((post, key) => (
-            <Text key={key} style={styles.text}>
-              {post.data.title}
-            </Text>
+            <View style={styles.post} key={key}>
+                <Text style={styles.author}>
+                    Published by {post.data.author}
+                </Text>
+                <Text style={styles.title}>
+                  {post.data.title}
+                </Text>
+                {post.data.thumbnail.length > 10 && (
+                    <Image
+                        style={styles.thumbnail}
+                        source={{
+                            uri: post.data.thumbnail
+                        }}
+                    />
+                )}
+                <View style={styles.postDetail}>
+                    <Text>
+                      Upvotes : {post.data.ups}
+                    </Text>
+                    <Text>
+                      Comments : {post.data.num_comments}
+                    </Text>
+                </View>
+            </View>
           ))}
         </ScrollView>
       </View>
@@ -43,15 +63,14 @@ const Best = () => {
 
 const styles = StyleSheet.create({
   container: {},
-  text: {
-    flex: 1,
-    flexWrap: "wrap",
-    width: "100%",
-    color: "black",
-    backgroundColor: "lightgrey",
-    paddingBottom: 60,
-    borderBottomWidth: 4,
-    borderBottomColor: "orange",
+  author: {
+    marginTop: 5,
+    marginLeft: 20,
+    fontStyle: 'italic'
+  },
+  title: {
+    textAlign: 'center',
+    marginVertical: 25
   },
   subReddits: {
     borderBottom: "1px",
@@ -59,6 +78,25 @@ const styles = StyleSheet.create({
     paddingBottom: 30,
     flexDirection: "row",
   },
+  postDetail: {
+  flexDirection: "row",
+  justifyContent: 'space-between',
+  marginHorizontal: 20,
+  marginBottom: 5
+  },
+  post: {
+    backgroundColor: '#DAE0E6',
+    margin: 10,
+    borderRadius: 20
+  },
+  thumbnail: {
+     width: 150,
+     height: 100,
+     marginLeft: 'auto',
+     marginRight: 'auto',
+     marginTop: 5,
+     marginBottom: 15
+  }
 });
 
 export { Best };
