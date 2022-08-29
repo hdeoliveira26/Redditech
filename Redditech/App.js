@@ -12,6 +12,7 @@ import {Landing} from './components/Landing';
 import { Home } from "./components/Home";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { routes } from "./routes/Route";
+import { SubredditPage } from "./components/SubredditPage";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,7 @@ const App = () => {
       <Stack.Navigator initialRouteName={userAuth ? "Home" : "Landing"}>
         <Stack.Screen name="Landing" component={Landing} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="SubredditPage" component={SubredditPage}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

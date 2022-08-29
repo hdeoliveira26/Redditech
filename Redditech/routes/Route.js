@@ -5,7 +5,9 @@ const routes = {
     config : {screens : {
         Landing : 'landing',
         Home : 'home',
-        Settings : 'settings'
+        Settings : 'settings',
+        SubredditPage: 'subRedditPage'
+
     }},
     state : {
         routes: [
@@ -15,6 +17,8 @@ const routes = {
                 name : 'home'
             },{
                 name : 'settings'
+            },{
+                name: 'subRedditPage'
             }
         ]
     }

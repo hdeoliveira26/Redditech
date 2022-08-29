@@ -17,7 +17,6 @@ const Home = () => {
         <Tab.Screen name="Top" component={Top} />
         <Tab.Screen name="New" component={New}/>
         <Tab.Screen name="Profile" component={Profile}/>
-
       </Tab.Navigator>
   );
 };

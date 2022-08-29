@@ -9,7 +9,7 @@ async function Auth(){
         scopes: [
             'account',
             'mysubreddits',
-            'read',
+            'read',     
             'identity',
             'history',
             'edit',

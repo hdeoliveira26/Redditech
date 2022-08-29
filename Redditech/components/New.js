@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ScrollView } from "react-native-gesture-handler";
-import { Search } from "./Search";
 
 const New = () => {
   const [posts, setPosts] = useState([]);
