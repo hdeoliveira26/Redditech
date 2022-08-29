@@ -1,11 +1,41 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import { Divider } from "react-native-paper";
+import { Button, Divider } from "react-native-paper";
 
 const SubredditPage = ({ route }) => {
   const { subredditName } = route.params;
   const [subReddit, setSubReddit] = useState([]);
+
+  const subscribe = () => {
+    AsyncStorage.getItem("userToken").then((token) => {
+      fetch('https://oauth.reddit.com/api/subscribe'),{
+        body: {action: 'sub'},
+        method: 'POST',
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
+
+  const unsubscribe = () => {
+    AsyncStorage.getItem("userToken").then((token) => {
+      fetch('https://oauth.reddit.com/api/subscribe'),{
+        body: {action: 'unsub'},
+        method: 'POST',
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  }
 
   useEffect(() => {
     AsyncStorage.getItem("userToken").then((token) => {
@@ -18,6 +48,7 @@ const SubredditPage = ({ route }) => {
           return result.json();
         })
         .then((data) => {
+          console.log(data);
           setSubReddit(data.data);
         })
         .catch((error) => {
@@ -25,6 +56,8 @@ const SubredditPage = ({ route }) => {
         });
     });
   }, []);
+
+
   return (
     <View>
       <Image style={styles.photo} source={{ uri: subReddit.icon_img }}></Image>
@@ -38,6 +71,8 @@ const SubredditPage = ({ route }) => {
       <Text>Number of active users:</Text>
       <Text>{subReddit.active_user_count}</Text>
       <Divider/>
+      <Text>{subReddit.user_is_subscriber?<Button onPress={unsubscribe}>Unsubscribe</Button>:<Button onPress={subscribe}>Subscribe</Button>}</Text>
+
     </View>
   );
 };
@@ -62,4 +97,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export { SubredditPage };
+export { SubredditPage};
